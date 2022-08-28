@@ -1,5 +1,5 @@
 div {
-    background-color: #B9FFF8;
+    /* background-color: #B9FFF8; */
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
@@ -8,12 +8,20 @@ div {
 body {
     margin:0;
     text-align:center;
-    font-family:verdana,monospace;
+    font-family: 'Merriweather', serif;
 
 }
 
 h1 {
    margin:0;
+   font-family: 'Sacramento', cursive;
+
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+h3{font-family: 'Montserrat', sans-serif;
+
 }
 .top-container{
     background-color: #B9FFF8;
@@ -22,15 +30,11 @@ h1 {
 }
 
 .middle-container {
-    background-color: red;
-    height: 200px;
-    width: 200px;
+    
 }
 
 .bottom-container{
-    background-color: blue;
-    height: 200px;
-    width: 200px;
+    
     
 }
 .Pro{
