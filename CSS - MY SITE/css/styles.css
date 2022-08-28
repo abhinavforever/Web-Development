@@ -1,0 +1,53 @@
+div {
+    background-color: #B9FFF8;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+body {
+    margin:0;
+    text-align:center;
+
+}
+
+h1 {
+   margin:0;
+}
+.top-container{
+    background-color: #B9FFF8;
+    padding: 100px;
+    position: relative;
+}
+
+.middle-container {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+}
+
+.bottom-container{
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    
+}
+.Pro{
+    text-decoration: underline;
+}
+.bottom-cloud{
+   position:relative;
+   bottom:300px;
+   left:80px;
+}
+.top-cloud{
+    position:relative;
+    left:200px;
+    bottom:30px;
+    
+}
+.mountain{
+    position: relative;
+    right:60px;
+
+}

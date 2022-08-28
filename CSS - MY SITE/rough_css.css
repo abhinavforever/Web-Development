@@ -1,0 +1,23 @@
+.left {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+}
+
+.middle {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+}
+
+.right {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    position: absolute;
+    left: 200px;
+}

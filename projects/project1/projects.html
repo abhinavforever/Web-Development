@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+</head>
+
+<body>
+    <header>
+        <h1>My Projects:</h1>
+    </header>
+
+    <main>
+        <pre><ol>
+            <li>PROJECT TITLE : HUMAN TRACKING ROBOT</li>
+            <li>About the Problem:It will track humans using IR(infrared) and Ultrasonic Sensors and follow human's movements.</li>
+            <li>BLOCK DIAGRAM & Working Methodology:
+                <img src="1.png" alt="Block Diagram of the project" width="750">
+                <br>
+                <h3><strong>Working Methodology:</strong></h3>
+                <pre>
+                    When you come near to the robot starts to follow you. there are 4 wheels in the robot. and 4 motors attached to the chassis. now there are three sensors on the robot one is an ultrasonic sensor and two IR sensor which arranges like two sensors left and right to the ultrasonic sensor. and when you put your hand near to the ultrasonic sensor the robot will start forward.
+
+                    If you turn your hand to the left side the Arduino robot moves on the left side, and if you put your hand in the right the robot will move in the right direction. so, how the whole system works we will talk about this.
+                    
+                    when you put your hand in from of the ultrasonic sensor then the sensor detects you and sends this information to the Arduino. there is some distance prefix in the Arduino so if your hand is away from the sensor it will not read that. and if your hand is near to the sensor it will read it.
+                    Now Arduino knows that there is something in front of the sensor and Arduino send some instruction to the motor driver and motor driver trigger the motors. and the Arduino robot starts to move forward we need to run all motor forward.
+                    
+                    Now, what about the sensors. Ir sensor works on infrared light which can also detect the object near to it. so there is two IR sensor one is at the left side of ultrasonic sensor and other is at the right side of the ultrasonic sensor. when anything comes near to the left sensor Arduino got the information that there is something is near to the left sensors and according to the code, the robot will turn to the left. and the same process for the right sensor. so this is how the human following robot works.</pre>
+                
+            </li>
+
+        </ol>
+        </pre>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+        body{
+            background-color: beige;
+        }
+        hr{
+            background-color: beige;
+            /* border-top-style:dotted;
+            border-bottom-style:none;
+            border-left-style: none;
+            border-right-style: none; */
+            border-style: dotted none none none; /*top right bottom left(clockwise order)*/
+            border-width:thick;
+            border-color: grey;
+            height:0px;
+            width:5%;
+        }
+        h1{
+            color:#66BFBF;
+        }
+        h3{
+            color:#66BFBF;
+        }
