@@ -9,22 +9,29 @@ body {
     margin:0;
     text-align:center;
     font-family: 'Merriweather', serif;
-    font-size: 200%;
+    /* font-size: 200%; */
+    line-height:2;
 
 }
 
 h1 {
+    color:#66BFBF;
     font-size:5.625rem; /*since 16px equates to 100% thus 90 px equates to a 562.5%*/
    margin-top: 50px auto 0 auto;
    font-family: 'Sacramento', cursive;
 
 }
 h2{
+    color:#66BFBF;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
 }
 h3{font-family: 'Montserrat', sans-serif;
+    color:#11999E;
 
+}
+a{
+    color:#11999E;
 }
 .top-container{
     background-color: #B9FFF8;
@@ -61,6 +68,36 @@ h3{font-family: 'Montserrat', sans-serif;
 
 }
 .programmer{
+    color:#66BFBF;
     position:relative;
     bottom:50px;
+    font-weight: normal;
+    font-size: 200%;
+}
+.skill-row{
+    width:50%;
+    margin:100px auto 100px auto ;
+    text-align: left;
+}
+.skills-para{
+    line-height: 2;
+}
+.C-icon{
+    width: 25%;
+    float:left;
+    margin-right:30px;
+}
+.Web-icon{
+    width: 50%;
+    float:right;
+    margin-left:30px;
+}
+.C-skills-para{
+    clear:left;
+    padding-top:20px;
+
+}
+.web-skills-para{
+    clear:right;
+    padding-top: 20px;
 }
