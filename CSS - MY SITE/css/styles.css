@@ -33,8 +33,19 @@ h3{font-family: 'Montserrat', sans-serif;
 a{
     color:#11999E;
 }
+pre{
+    color:#40514E ;
+}
+.first-hr{
+    border-top:  10px dotted  #EAF6F6;
+    height:0;
+    border-bottom: none;
+    border-left:none;
+    width:10%;
+
+}
 .top-container{
-    background-color: #B9FFF8;
+    background-color:#EAF6F6;
     padding: 100px;
     position: relative;
 }
@@ -44,8 +55,7 @@ a{
 }
 
 .bottom-container{
-    
-    
+    background-color: #66bfbf;
 }
 .Pro{
     text-decoration: underline;
@@ -101,3 +111,33 @@ a{
     clear:right;
     padding-top: 20px;
 }
+.sign{
+    color: #EAF6F6;
+}
+
+.btn {
+    background: #66bfbf;
+    background-image: -webkit-linear-gradient(top, #66bfbf, #66bfbf);
+    background-image: -moz-linear-gradient(top, #66bfbf, #66bfbf);
+    background-image: -ms-linear-gradient(top, #66bfbf, #66bfbf);
+    background-image: -o-linear-gradient(top, #66bfbf, #66bfbf);
+    background-image: linear-gradient(to bottom, #66bfbf, #66bfbf);
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 9px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #29f50e;
+    background-image: -webkit-linear-gradient(top, #29f50e, #29f50e);
+    background-image: -moz-linear-gradient(top, #29f50e, #29f50e);
+    background-image: -ms-linear-gradient(top, #29f50e, #29f50e);
+    background-image: -o-linear-gradient(top, #29f50e, #29f50e);
+    background-image: linear-gradient(to bottom, #29f50e, #29f50e);
+    text-decoration: none;
+  }
