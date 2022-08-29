@@ -9,16 +9,19 @@ body {
     margin:0;
     text-align:center;
     font-family: 'Merriweather', serif;
+    font-size: 200%;
 
 }
 
 h1 {
-   margin:0;
+    font-size:5.625rem; /*since 16px equates to 100% thus 90 px equates to a 562.5%*/
+   margin-top: 50px auto 0 auto;
    font-family: 'Sacramento', cursive;
 
 }
 h2{
     font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
 }
 h3{font-family: 'Montserrat', sans-serif;
 
@@ -47,12 +50,17 @@ h3{font-family: 'Montserrat', sans-serif;
 }
 .top-cloud{
     position:relative;
-    left:200px;
+    left:250px;
     bottom:30px;
+    top:30px;
     
 }
 .mountain{
     position: relative;
     right:60px;
 
+}
+.programmer{
+    position:relative;
+    bottom:50px;
 }
