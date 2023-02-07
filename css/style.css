@@ -1,0 +1,37 @@
+hr{
+    border-style:dotted;
+    background-color:white;
+    height:0px;
+    border-style:dotted none none none;
+    border-width: thick;
+    border-color: black ;
+    width:5%;
+}
+h1{
+    color:yellow
+}
+.heading{
+    color: brown;
+}
+.secondtypeheading{
+    color:blue;
+}
+#h3{
+    color:green; 
+}
+.image
+{
+    height:300px;
+    width: 200px;
+}
+#h1:hover{
+    color:black
+}
+img
+{
+    border-radius: 100%
+}
+#h1{
+    color:pink;
+}
+/* we see that id selector is given preference over class selector and class selector is given preference over tag selector  */
