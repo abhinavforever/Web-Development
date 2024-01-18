@@ -1,0 +1,7 @@
+> const x = 5;
+undefined
+> x * 2
+10
+> console.log("Hello, world!");
+Hello, world!
+undefined
