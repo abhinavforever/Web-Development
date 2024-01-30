@@ -1,17 +1,4 @@
-import fs from 'fs'
-function submitBlog(){
-    const t=document.querySelector("#title").value
-    const c=document.querySelector("#content").value
-    const a=document.querySelector("#author").value
-    const filename = `${t}${a}.txt`
-    fs.writeFile(`database/${filename}`, c, (err) => {
-        if (err) {
-          console.error('Error writing to file:', err);
-        } else {
-          console.log('File has been written successfully.');
-        }
-      })
- }
+import fs from 'fs';
 import express from "express"
 import bodyParser from "body-parser";
 import { fileURLToPath } from 'url';
@@ -20,11 +7,12 @@ import path from 'path'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-console.log(__dirname)
+// console.log(__dirname)
 
 const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'views/js')));
 const port = 3000;
 app.get('/', (req, res) => {
     res.render('index.ejs');
@@ -39,6 +27,21 @@ app.get('/contact',(req,res)=>{
 app.get('/music',(req,res)=>{
     res.sendFile('music/index.html')
 })
+
+app.post('/save-blog', (req, res) => {
+  const { title, content, author } = req.body;
+  const filename = `${title}${author}.txt`;
+
+  fs.writeFile(`database/${filename}`, content, (err) => {
+      if (err) {
+          console.error('Error writing to file:', err);
+          res.status(500).send('Error writing to file');
+      } else {
+          console.log('File has been written successfully.');
+          res.sendStatus(200);
+      }
+  });
+});
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);   
   });
