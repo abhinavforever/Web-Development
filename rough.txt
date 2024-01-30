@@ -1,0 +1,3 @@
+<h1 class="blog-title">My Awesome Blog</h1>
+            <p>Welcome to my corner of the internet!</p>
+            <p class="blog-description">A place for insightful thoughts and ideas</p>
