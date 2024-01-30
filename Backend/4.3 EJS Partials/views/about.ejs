@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+    <h1>About Me</h1>
+    <!-- cat.jpeg is a static file , we have told the app in index.js to use static files from public folder, so we don't need to write public/styles/layout.css , instead we just write /styles/layout.css because / at the starting here means public directory already  -->
+    <img class="profile" src="/images/cat.jpeg" alt="cat profile">
+    <p>
+      Quam purus justo enim purus, dolor enim, ut eu lectus nam eget nibh. Ante illum nullam leo, vivamus aliquam massa
+      massainceptos fermentum porttitor, blandit vehicula, lorem in placerat ut aliquam at sociosqu. Vivamus duis
+      ultricies
+      aliquam placerat, tincidunt scelerisque imperdiet, egestas erat vel. Libero rerum. Donec ligula tristique, purus
+      montes,
+      feugiatid nunc in a nec. Duis odio, vitae sed etiam mi massa, laoreet amet purus amet rhoncus, eget sed, arcu
+      urna.
+  
+    </p>
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>
