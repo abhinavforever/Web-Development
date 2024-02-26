@@ -7,7 +7,7 @@ import path from 'path'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-// console.log(__dirname)
+console.log(__dirname)
 
 const app = express();
 app.use(express.static("public"));
@@ -27,6 +27,21 @@ app.get('/contact',(req,res)=>{
 app.get('/music',(req,res)=>{
     res.sendFile('music/index.html')
 })
+app.get('/viewblogs', async (req, res) => {
+    // try {
+    //     const databasePath = path.join(__dirname, 'database');
+    //     const files = await fs.readdir(databasePath);
+
+    //     // res.render('/viewblogs/index.ejs', { files });
+    //     res.render(__dirname+'/views/viewblogs/index.ejs');
+
+
+    // } catch (error) {
+    //     console.error(error);
+    //     res.status(500).send('Internal Server Error');
+    // }
+    res.render(__dirname+'/views/viewblogs/index.ejs');
+});
 
 app.post('/save-blog', (req, res) => {
   const { title, content, author } = req.body;
@@ -45,5 +60,3 @@ app.post('/save-blog', (req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);   
   });
-
-
