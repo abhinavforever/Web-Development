@@ -12,7 +12,7 @@ console.log(__dirname)
 const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'views/js')));
+app.use(express.static(path.join(__dirname, 'views')));
 const port = 3000;
 app.get('/', (req, res) => {
     res.render('index.ejs');
