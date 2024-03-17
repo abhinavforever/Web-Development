@@ -1,18 +1,18 @@
 import fs from 'fs';
-It seems like you're importing the Node.js fs module in JavaScript/TypeScript. The fs module is used for interacting with the file system in Node.js.
+    It seems like you're importing the Node.js fs module in JavaScript/TypeScript. The fs module is used for interacting with the file system in Node.js.
 import: This is an ES6 import statement used to import functionality from another module.
 fs: This is the name given to the imported module. In this case, it refers to the Node.js fs module.
 'fs': This is the module specifier, which is the path or name of the module being imported. In this case, 'fs' refers to the built-in Node.js module for file system operations.
 With this import statement, you can now use the fs module's functions and methods to perform various file system operations in your JavaScript/TypeScript code.
 
 import express from "express"
-With this import statement, you can now use the Express.js framework's functionality to create web servers, handle HTTP requests, define routes, and more in your JavaScript/TypeScript code. Express.js is a popular web application framework for Node.js, known for its simplicity and flexibility in building web applications and APIs.
+    With this import statement, you can now use the Express.js framework's functionality to create web servers, handle HTTP requests, define routes, and more in your JavaScript/TypeScript code. Express.js is a popular web application framework for Node.js, known for its simplicity and flexibility in building web applications and APIs.
 
 import bodyParser from "body-parser";
-The body-parser middleware is used to parse the body of incoming HTTP requests in an Express.js application. It can parse different types of request bodies, such as JSON, URL-encoded, and raw. This is particularly useful when dealing with POST requests where form data or JSON data needs to be extracted from the request body.
+    The body-parser middleware is used to parse the body of incoming HTTP requests in an Express.js application. It can parse different types of request bodies, such as JSON, URL-encoded, and raw. This is particularly useful when dealing with POST requests where form data or JSON data needs to be extracted from the request body.
 
 import { fileURLToPath } from 'url';
-With this import statement, you can use the fileURLToPath function in your JavaScript/TypeScript code to convert file URLs to file paths, which can be useful when working with file-related operations in Node.js applications.
+    With this import statement, you can use the fileURLToPath function in your JavaScript/TypeScript code to convert file URLs to file paths, which can be useful when working with file-related operations in Node.js applications.
 
 import { dirname }   from 'path';
 import path from 'path'
@@ -30,12 +30,14 @@ const port = 3000;
 app.get('/', (req, res) => {
     res.render('index.ejs');
 });
-res.render is a function commonly used in Node.js web applications to render views (HTML pages) and send them as responses to clients. 
+    res.render is a function commonly used in Node.js web applications to render views (HTML pages) and send them as responses to clients. 
 
 // const absolutePath = path.join(__dirname, 'public','about','index.html');
 app.get('/about',(req,res)=>{
     res.sendFile("about/index.html" )
 })
+    res.sendFile() is an Express.js method used to send files as responses to HTTP requests. This method is particularly useful when you want to send files such as images, PDFs, CSS files, client-side JavaScript files, etc., in response to a request.
+
 app.get('/contact',(req,res)=>{
     res.sendFile("contact/index.html")
 })
