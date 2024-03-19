@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'views/')));
 const port = 3000;
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+    res.render(__dirname+'/views/index.ejs');
 });
 // const absolutePath = path.join(__dirname, 'public','about','index.html');
 app.get('/about',(req,res)=>{
