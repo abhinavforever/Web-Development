@@ -1,0 +1,70 @@
+/* Setting font properties */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #333333;
+  }
+  
+  /* Text alignment */
+  h1 {
+    text-align: center;
+  }
+  
+  /* Text decoration */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Text transformation */
+  .uppercase {
+    text-transform: uppercase;
+  }
+  
+  .lowercase {
+    text-transform: lowercase;
+  }
+  
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .border-example {
+    border: 2px solid black; /* border style: solid, color: black, thickness: 2px */
+    padding: 20px; /* adding padding for better visualization */
+    border-style: dotted;
+  }
+  /* Letter and word spacing */
+  .spaced-text {
+    letter-spacing: 2px;
+    word-spacing: 5px;
+  }
+  
+  /* Text overflow */
+  .overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Text shadow */
+  .shadowed-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Text wrapping */
+  .wrap-text {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  
+  /* Text indentation */
+  .indented-text {
+    text-indent: 20px;
+  }
+  
+  /* Text direction */
+  .rtl-text {
+    direction: rtl;
+  }
+  

@@ -29,7 +29,7 @@ app.post("/submit", (req, res) => {
   //2. Send the index.ejs as a response and add the adjective and noun to the res.render
   //3. Test to make sure that the random words display in the h1 element in index.ejs
 
-const randomIndex1 = Math.floor(Math.random() * adj.length);
+const randomIndex1 = Math.floor(Math.random() * adj.length); // math.floor because arrays are 0-indexed
 const randomIndex2 = Math.floor(Math.random() * noun.length);
 const randomAdj = adj[randomIndex1] 
 const randomNoun = noun[randomIndex2];
