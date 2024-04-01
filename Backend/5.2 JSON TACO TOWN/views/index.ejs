@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Taco Recipes</title>
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body>
+  <h1>Taco Town 🌮</h1>
+
+  <form action="/recipe" method="POST" class="buttons">
+    <button type="submit" value="Chicken Taco" name="choice">🍗</button>
+    <button type="submit" value="Beef Taco" name="choice">🥩</button>
+    <button type="submit" value="Fish Taco" name="choice">🐟</button>
+  </form>
+  <div id="recipeContainer" class="hidden">
+
+    <!-- If no recipe yet, show: -->
+    <!-- <h2>Pick your favourite taco ingredient 👆</h2> -->
+    <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
+
+    <h3>Ingredients:</h3>
+    <ul id="ingredientsList">
+      <!-- <li></li>
+      <li>Salsa name</li>
+      <li>Every other topping</li> -->
+      <% if (choice.length == 0){ %>
+<p> DHABE MEI APKA SWAGAT HAI</p>
+<h2>Pick your favourite taco ingredient 👆</h2>
+      <%}
+      else {%>
+      <p><%= choice.ingredients.protein.name %>,<%= choice.ingredients.protein.preparation %></p> 
+      <p><%= choice.ingredients.salsa.name %></p>
+      <p>Add <%= choice.ingredients.toppings[0].quantity %> of <%=choice.ingredients.toppings[0].name %> </p>
+      <p><%= choice.ingredients.toppings[1].quantity %> of <%= choice.ingredients.toppings[1].name%> </p>
+      <p><%= choice.ingredients.toppings[2].quantity %> of <%= choice.ingredients.toppings[2].name%> </p>
+      <% if(choice.name=="Chicken Taco") {%>
+        <p><%= choice.ingredients.toppings[3].quantity %> of <%= choice.ingredients.toppings[3].name%> </p>
+      <%} %>
+      
+      <% } %>
+    </ul>
+
+  </div>
+</body>
+
+</html>
