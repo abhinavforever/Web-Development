@@ -20,8 +20,6 @@
     <!-- <h2>Pick your favourite taco ingredient 👆</h2> -->
     <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
 
-    <h3>Ingredients:</h3>
-    <ul id="ingredientsList">
       <!-- <li></li>
       <li>Salsa name</li>
       <li>Every other topping</li> -->
@@ -31,6 +29,8 @@
 <h2>Pick your favourite taco ingredient 👆</h2>
       <%}
       else {%>
+        <h3>Ingredients:</h3>
+        <ul id="ingredientsList">
       <p><%= choice.ingredients.protein.name %>,<%= choice.ingredients.protein.preparation %></p> 
       <p><%= choice.ingredients.salsa.name %></p>
       <p>Add <%= choice.ingredients.toppings[0].quantity %> of <%=choice.ingredients.toppings[0].name %> </p>
