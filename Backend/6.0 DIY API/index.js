@@ -7,45 +7,143 @@ const port = 3000;
 const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 
 app.use(bodyParser.urlencoded({ extended: true }));
-const config = {
-  method: 'get',
-maxBodyLength: Infinity,
-  url: 'https://localhost:3000/random/',
-  headers: { }
-};
-//1. GET a random joke
-app.get('/random/',(req,res)=>{
-  
-  const rand=Math.floor(Math.random()*jokes.length);
+
+//1. GET a random joke DONE
+app.get('/random',(req,res)=>{
+  const rand=Math.floor(Math.random()*jokes.length)
   const joke=jokes[rand]
-      axios(config)
-    .then(function (joke) {
-      // console.log(JSON.stringify(response.data));
-      // Sending the joke as a response to the client
-      res.send(JSON.stringify(joke));
-    })
-    .catch(function (error) {
-      console.log(error);
-      res.status(500).send("Error occurred while fetching joke.");
-    });
+
+  res.json(joke)
 })
-//2. GET a specific joke
 
-//3. GET a jokes by filtering on the joke type
+//2. GET a specific joke DONE
+app.get(`/jokes/:id`,(req,res)=>{
+  let n = req.params.id;
+  let joke=jokes[0]
+  let j=0
+  for( j=0;j<jokes.length;j++){
+    if(jokes[j].id==n){
+      joke=jokes[j]
+      break
+    }
+  }
+  if(j==jokes.length){
+    return res.status(404).json({ error: 'Joke not found' });
+  }
+  res.json(joke)
+});
 
-//4. POST a new joke
+//3. GET a jokes by filtering on the joke type DONE
+app.get(`/filter`,(req,res)=>{
+  let type=req.query.type;
+  let a=[]
+  for(let j=0;j<jokes.length;j++){
+    if(jokes[j].jokeType===type){
+      a.push(jokes[j])
+    }
+  }
+  res.json(a)
+})
 
-//5. PUT a joke
+//4. POST a new joke DONE
+app.post('/jokes',(req,res)=>{
+      const { text, type } = req.body;
 
-//6. PATCH a joke
+      // Assuming jokes is an array where you store your jokes
+      let id=jokes.length+1
+      const newJoke = {
+        id:id,
+        jokeText: text,
+        jokeType: type
+      };
 
-//7. DELETE Specific joke
+      // Add the new joke to the array of jokes
+      jokes.push(newJoke);
+      res.json(newJoke)
+
+})
+
+//5. PUT a joke DONE
+app.put(`/jokes/:id`,(req,res)=>{
+      const { text, type } = req.body;
+      let id=req.params.id
+      let i=0;
+      let joke=jokes[0]
+      for( i=0;i<jokes.length;i++){
+        if(jokes[i].id==id){
+          joke=jokes[i];
+          break
+        }
+      }
+      if(i==jokes.length){
+        return res.status(404).json({ error: 'Joke not found' });
+      }
+      joke.jokeText=text;
+      joke.jokeType=type;
+      res.json(jokes[i])
+
+})
+
+//6. PATCH a joke DONE
+
+app.patch('/jokes/:id',(req,res)=>{
+      const jokeId = req.params.id;
+      const { text, type } = req.body;
+      let id=req.params.id
+      const jokeToUpdate = jokes.find(joke => joke.id == jokeId);
+      if (!jokeToUpdate) {
+        return res.status(404).json({ error: 'Joke not found' });
+      }
+    
+      // Update the joke properties if they are provided in the request body
+      if (text !== undefined) {
+        jokeToUpdate.jokeText = text;
+      }
+      if (type !== undefined) {
+        jokeToUpdate.jokeType = type;
+      }
+    
+      res.json({ message: 'Joke updated successfully', joke: jokeToUpdate });
+
+})
 
 //8. DELETE All jokes
+// const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
+const config = {
+  headers: {
+    'apiKey': masterKey
+  }
+};
+app.delete('/jokes/all',(req,res)=>{
+      axios.delete(`http://localhost:3000/jokes/all`, config)
+      .then(response => {
+        jokes.length=0
+        res.json({message:"all jokes deleted successfully",jokes_array: jokes})
+      })
+      .catch(error => {
+        res.json({message:"error deleting all jokes",jokes_array: jokes})
+      });
+})
+
+//7. DELETE Specific joke DONE
+
+app.delete('/jokes/:id',(req,res)=>{
+      const jokeId = req.params.id;
+      const joketodel = jokes.find(joke => joke.id == jokeId);
+      if (!joketodel) {
+        return res.status(404).json({ error: 'Joke not found' });
+      }
+      jokes=jokes.filter(joke=> joke!=joketodel)
+      
+      res.json({message:`joke with id ${jokeId} deleted successfully`,joke_array: jokes})
+})
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
 });
+
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
 var jokes = [
   {
