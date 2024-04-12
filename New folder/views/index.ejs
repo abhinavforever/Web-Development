@@ -1,0 +1,58 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Crafters</title>
+    <link rel="stylesheet" href="styles/1.css">
+
+</head>
+
+<body>
+    
+    <%- include("partials/header.ejs") %>
+        <!-- Form to create a new blog post -->
+        <header>
+            <h1>Welcome to Pregnancy Wellness</h1>
+        </header>
+        <section id="featured-content">
+            <table style="background-color: aliceblue;">
+                <tr>
+                    <td><h2>Featured Tips for a Healthy Pregnancy</h2>
+                        <ul>
+                            <li><strong>Nutrition:</strong> Eat a balanced diet rich in fruits, vegetables, lean proteins, and whole grains.</li>
+                            <li><strong>Exercise:</strong> Engage in safe and moderate exercise activities, such as walking, swimming, and prenatal yoga.</li>
+                            <li><strong>Self-Care:</strong> Prioritize relaxation, sleep, and stress management techniques to support your well-being during pregnancy.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <image src="../styles/1.jpg" height="200" width="200"></image>
+                    </td>
+                </tr>
+            </table>
+
+        </section>
+        <section id="signup-login">
+            <h2>Sign Up or Log In</h2>
+            <p>Join our community to access personalized features and connect with other pregnant women:</p>
+            <form action="signup.php" method="post"> <!-- Replace "signup.php" with your actual signup/login handling script -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Sign Up / Log In</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Log in here</a>.</p> <!-- Replace "login.html" with the actual login page URL -->
+        </section>
+        <footer>
+            <p>&copy; 2024 Pregnancy Wellness. All rights reserved.</p>
+        </footer>
+
+        <%- include("partials/footer.ejs") %>
+
+        <script src="../js/index2.js"></script>
+</body>
+
+</html>
