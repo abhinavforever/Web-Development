@@ -11,6 +11,7 @@ body {
     font-family: 'Merriweather', serif;
     /* font-size: 200%; */
     line-height:2;
+    background-color: rgb(154, 255, 4);
 
 }
 
@@ -22,12 +23,12 @@ h1 {
 
 }
 h2{
-    color:#66BFBF;
+    color:purple;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
 }
 h3{font-family: 'Montserrat', sans-serif;
-    color:#11999E;
+    color:blue;
 
 }
 a{
@@ -61,7 +62,7 @@ pre{
 }
 
 .bottom-container{
-    background-color: #66bfbf;
+    background-color: aqua;
 }
 .Pro{
     text-decoration: underline;
@@ -92,7 +93,7 @@ pre{
 }
 .skill-row{
     width:50%;
-    margin:100px auto 100px auto ;
+    margin:5px auto 5px auto ;
     text-align: left;
 }
 .skills-para{
@@ -104,7 +105,20 @@ pre{
     margin-right:30px;
 }
 .Web-icon{
-    width: 50%;
+    width: 40%;
+    margin: 20px;
+    float:right;
+    margin-left:30px;
+}
+.Web-icon1{
+    width: 40%;
+    margin: 20px;
+    float:left;
+    margin-left:30px;
+}
+.Web-icon2{
+    width: 100%;
+    margin: 10px;
     float:right;
     margin-left:30px;
 }
@@ -118,7 +132,7 @@ pre{
     padding-top: 20px;
 }
 .sign{
-    color: #EAF6F6;
+    color: #010606;
 }
 
 .btn {
