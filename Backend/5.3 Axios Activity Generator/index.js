@@ -15,7 +15,7 @@ app.get("/", async (req, res) => {
   try {
     const response = await axios.get("https://bored-api.appbrewery.com/random");
     const result = response.data;
-    console.log(result);
+    // console.log(result);
     res.render("index.ejs", { e:false, goPressed:false , data: result });
   } catch (error) {
     console.error("Failed to make request:", error.message);
@@ -26,12 +26,12 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-        console.log(req.body);
+        // console.log(req.body);
         const params = {
           type: req.body.type, // Type of quiz questions
           participants: req.body.participants, // Number of participants for the quiz
         };
-        console.log(params.type, params.participants)
+        // console.log(params.type, params.participants)
 
         // Define the URL of the API endpoint
         // const apiUrl = `https://bored-api.appbrewery.com/filter?type=${params.type}&participants=${params.participants}`
@@ -43,12 +43,12 @@ app.post("/", async (req, res) => {
           .then(response => {
             // Handle successful response
             const rand=Math.floor(Math.random()*response.data.length)
-            console.log('Response data:', response.data[rand]);
+            // console.log('Response data:', response.data[rand]);
             res.render("index.ejs",{e:false , goPressed:true ,data_post :response.data[rand]})
           })
           .catch(error => {
             // Handle error
-            console.error('Error occurred:', error);
+            // console.error('Error occurred:', error);
             res.render("index.ejs",{e:true ,goPressed:true , error:"No activities that match your criteria."})
           });
 
