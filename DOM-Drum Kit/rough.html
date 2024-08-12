@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fibonacci and Squares</title>
+<script>
+    // Function to generate first n Fibonacci numbers
+    function generateFibonacci() {
+        var n = parseInt(prompt("Enter the number of Fibonacci numbers to generate:"));
+        var fibNumbers = [0, 1];
+
+        for (var i = 2; i < n; i++) {
+            fibNumbers[i] = fibNumbers[i - 1] + fibNumbers[i - 2];
+        }
+
+        alert("First " + n + " Fibonacci numbers:\n" + fibNumbers.join(", "));
+    }
+
+    // Function to generate a table of numbers and their squares up to n
+    function generateSquares() {
+        var n = parseInt(prompt("Enter a number n to generate squares up to n:"));
+        var tableData = "Number\tSquare\n";
+
+        for (var i = 1; i <= n; i++) {
+            tableData += i + "\t" + (i * i) + "\n";
+        }
+
+        alert("Table of numbers and their squares up to " + n + ":\n\n" + tableData);
+    }
+</script>
+</head>
+<body>
+<h1>Fibonacci and Squares</h1>
+<button onclick="generateFibonacci()">Generate Fibonacci Numbers</button>
+<button onclick="generateSquares()">Generate Squares Table</button>
+</body>
+</html>

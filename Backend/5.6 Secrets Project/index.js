@@ -24,7 +24,7 @@ const API_URL = "https://secrets-api.appbrewery.com";
 app.get("/",async(req,res)=>{
     try{
     const result = await axios.get(API_URL + "/random" );
-        // console.log((result.data))
+        console.log((result.data))
         res.render("index.ejs", { secret: result.data.secret , user: result.data.username });
     }
        catch (error) {

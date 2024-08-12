@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primes and Squares</title>
+<script>
+    // Function to generate first n Fibonacci numbers
+    function isPrime(num) {
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+    
+    // Check for divisibility by all numbers up to the square root of num
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
+    }
+    
+    return true;
+  }
+  
+  // Function to generate the first 'n' prime numbers
+  function generatePrimes() {
+    let n = prompt("Enter the number of prime numbers you want to generate:");
+    
+    if (isNaN(n)) {
+      alert("Please enter a valid number.");
+      return;
+    }
+    
+    n = parseInt(n);
+    let primes = [];
+    
+    for (let i = 2; primes.length < n; i++) {
+      if (isPrime(i)) {
+        primes.push(i);
+      }
+    }
+    
+    alert("The first " + n + " prime numbers are: " + primes.join(', '));
+  }
+
+    // Function to generate a table of numbers and their squares up to n
+    function generateSquares() {
+        var n = parseInt(prompt("Enter a number n to generate squares up to n:"));
+        var tableData = "Number\tSquare\n";
+
+        for (var i = 1; i <= n; i++) {
+            tableData += i + "\t" + (i * i) + "\n";
+        }
+
+        alert("Table of numbers and their squares up to " + n + ":\n\n" + tableData);
+    }
+</script>
+</head>
+<body>
+<h1>Primes and Squares</h1>
+<button onclick="generatePrimes() ()">Generate Prime Numbers</button>
+<button onclick="generateSquares()">Generate Squares Table</button>
+</body>
+</html>
